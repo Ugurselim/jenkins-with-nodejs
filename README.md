@@ -7,8 +7,7 @@ docker build -t jenkins-nodejs-dind .
 # How to run Jenkins?
 
 ```
-docker run -p 8080:8080 -p 50000:50000 -d --restart=on-failure -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd)/datadir:/var/jenkins_home --name jenkins-nodejs-dind jenkins-nodejs-dind
-```
+docker run -p 8080:8080 -p 50000:50000 -d --restart=on-failure -v /var/run/docker.sock:/var/run/docker.sock -v $(pwd)/datadir:/var/jenkins_home --name jenkins-nodejs-dind jenkins-nodejs-dind --platform=linux/amd64```
 
 # How to monitor Jenkins?
 
